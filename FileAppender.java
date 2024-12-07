@@ -3,7 +3,15 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileAppender {
-     public static void appendToFile(String filename, String content) throws IOException {
+    /**
+     * Appends the given content to a file with the specified filename.
+     * If the file does not exist, it will be created.
+     * 
+     * @param filename The name of the file to append to.
+     * @param content  The content to append to the file.
+     * @throws IOException If an I/O error occurs during file writing.
+     */ 
+    public static void appendToFile(String filename, String content) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true))) {
             writer.write(content);
             writer.newLine(); // Add a newline after appending the content
