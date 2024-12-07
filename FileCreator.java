@@ -3,7 +3,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileCreator {
-
+    /**
+     * Creates a file with the specified filename, writes the given content to it, and saves the file.
+     * 
+     * @param filename The name of the file to create.
+     * @param content  The content to write to the file.
+     * @throws IOException If an I/O error occurs during file creation or writing.
+     */
     public static void createAndWriteFile(String filename, String content) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
             writer.write(content);
