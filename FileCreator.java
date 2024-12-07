@@ -1,4 +1,15 @@
-public class FIleCreator{
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileCreator {
+
+    public static void createAndWriteFile(String filename, String content) throws IOException {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
+            writer.write(content);
+        }
+    }
+
     public static void main(String[] args) {
         String filename = "example.txt"; // Name of the file to create
         String content = "This is the content of the file."; // Content to write to the file
