@@ -3,6 +3,13 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class FileReaderUtility {
+    /**
+     * Reads the content of a file and returns it as a string.
+     * 
+     * @param filename The name of the file to read.
+     * @return A string containing the content of the file.
+     * @throws IOException If an I/O error occurs during file reading.
+     */
     public static String readFileAsString(String filename) throws IOException {
         StringBuilder content = new StringBuilder();
 
